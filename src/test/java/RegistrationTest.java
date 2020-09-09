@@ -1,14 +1,15 @@
-import driver.DriverFactory;
-import driver.DriverFactoryProvider;
+import config.StoreConfig;
+import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
-public class RegistrationTest {
-    protected WebDriver driver;
+public class RegistrationTest extends AbstractChromeDriverTest {
+
+    //This should be in page manager
+    private StoreConfig config;
+
+
     @Test
     public void registrationTest () {
-        DriverFactory driverFactory = DriverFactoryProvider.getDriverFactory("chrome");
-        driver = driverFactory.getDriver();
-        driver.get("http://automationpractice.com/index.php");
+            driver.get("");
     }
 }
