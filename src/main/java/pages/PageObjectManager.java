@@ -1,16 +1,20 @@
 package pages;
 
+import config.StoreConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageObjectManager {
 
-    public WebDriver driver;
-    public HomePage homePage;
-    public RegistrationPage registrationPage;
+    private WebDriver driver;
+    private HomePage homePage;
+    private RegistrationPage registrationPage;
+    private StoreConfig storeConfig;
 
-    public PageObjectManager(WebDriver driver) {
+
+    public PageObjectManager(WebDriver driver, StoreConfig storeConfig) {
         this.driver = driver;
+        this.storeConfig = storeConfig;
     }
 
     public HomePage getHomePage() {
