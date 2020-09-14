@@ -76,6 +76,7 @@ fabric.properties
 .gradle/
 .idea/workspace.xml
 .idea
+.idea/misc.xml
 
 .gradle
 /build/
