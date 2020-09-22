@@ -1,3 +1,4 @@
+import config.StoreConfig;
 import driver.DriverFactory;
 import driver.DriverFactoryProvider;
 import org.junit.Before;
@@ -16,7 +17,7 @@ public class RegistrationTest  extends AbstractChromeDriverTest{
 
     @Test
     public void registrationTest () {
-        driver.get("");
+        pageManager.goToHomePage();
         pageManager.getHomePage().clickSignInButton();
     }
 }

@@ -30,4 +30,8 @@ public class PageObjectManager {
         }
         return registrationPage;
     }
+
+    public void goToHomePage() {
+        driver.get(storeConfig.getUrl());
+    }
 }
