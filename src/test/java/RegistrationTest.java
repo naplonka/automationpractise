@@ -1,9 +1,5 @@
-import config.StoreConfig;
-import driver.DriverFactory;
-import driver.DriverFactoryProvider;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import pages.PageObjectManager;
 
 public class RegistrationTest  extends AbstractChromeDriverTest{

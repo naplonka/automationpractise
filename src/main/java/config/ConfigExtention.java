@@ -1,5 +1,6 @@
 package config;
-import lombok.extern.slf4j.Slf4j;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;
@@ -7,9 +8,7 @@ import org.junit.jupiter.api.extension.ParameterResolver;
 
 import java.io.IOException;
 import java.net.URL;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-@Slf4j
 public class ConfigExtention implements ParameterResolver {
     private final StoreConfig storeConfig;
 

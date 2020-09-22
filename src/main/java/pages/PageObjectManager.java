@@ -9,7 +9,7 @@ public class PageObjectManager {
     private WebDriver driver;
     private HomePage homePage;
     private RegistrationPage registrationPage;
-    private StoreConfig storeConfig;
+    public StoreConfig storeConfig;
 
 
     public PageObjectManager(WebDriver driver, StoreConfig storeConfig) {
