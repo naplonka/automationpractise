@@ -1,26 +1,22 @@
-import config.StoreConfig;
 import driver.DriverFactory;
 import driver.DriverFactoryProvider;
-import io.github.bonigarcia.seljup.SeleniumJupiter;
+import extention.ConfigExtension;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 
-@ExtendWith(SeleniumJupiter.class)
+public abstract class AbstractChromeDriverTest extends ConfigExtension {
+    WebDriver driver;
 
-public abstract class AbstractChromeDriverTest {
-    protected WebDriver driver;
-    protected StoreConfig storeConfig;
-
-        public AbstractChromeDriverTest() {
+        AbstractChromeDriverTest() {
             super();
         }
 
         @Before
-        public void beforeTest() {
+        public void beforeTest(){
             DriverFactory driverFactory = DriverFactoryProvider.getDriverFactory("chrome");
             driver = driverFactory.getDriver();
+
         }
 
         @After
