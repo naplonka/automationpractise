@@ -4,7 +4,6 @@ import pages.PageObjectManager;
 
 
 public class RegistrationTest  extends AbstractChromeDriverTest{
-
     private PageObjectManager pageManager;
 
     public RegistrationTest() {

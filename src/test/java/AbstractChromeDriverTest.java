@@ -13,7 +13,7 @@ public abstract class AbstractChromeDriverTest extends ConfigExtension {
         }
 
         @Before
-        public void beforeTest(){
+        public void beforeTest() {
             DriverFactory driverFactory = DriverFactoryProvider.getDriverFactory("chrome");
             driver = driverFactory.getDriver();
 

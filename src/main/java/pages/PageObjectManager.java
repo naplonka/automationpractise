@@ -10,8 +10,7 @@ public class PageObjectManager {
     private HomePage homePage;
     private RegistrationPage registrationPage;
     private StoreConfig storeConfig;
-
-
+    
     public PageObjectManager(WebDriver driver, StoreConfig storeConfig) {
         this.driver = driver;
         this.storeConfig = storeConfig;
