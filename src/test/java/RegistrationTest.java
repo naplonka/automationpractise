@@ -2,9 +2,13 @@ import org.junit.Before;
 import org.junit.Test;
 import pages.PageObjectManager;
 
-public class RegistrationTest  extends AbstractChromeDriverTest{
 
+public class RegistrationTest  extends AbstractChromeDriverTest{
     private PageObjectManager pageManager;
+
+    public RegistrationTest() {
+        super();
+    }
 
     @Before
     public void setUp(){

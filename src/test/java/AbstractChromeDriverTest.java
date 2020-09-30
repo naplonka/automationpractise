@@ -1,15 +1,14 @@
-import config.StoreConfig;
 import driver.DriverFactory;
 import driver.DriverFactoryProvider;
+import extention.ConfigExtension;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
-public abstract class AbstractChromeDriverTest {
-    protected WebDriver driver;
-    protected StoreConfig storeConfig;
+public abstract class AbstractChromeDriverTest extends ConfigExtension {
+    WebDriver driver;
 
-        public AbstractChromeDriverTest() {
+        AbstractChromeDriverTest() {
             super();
         }
 
@@ -17,6 +16,7 @@ public abstract class AbstractChromeDriverTest {
         public void beforeTest() {
             DriverFactory driverFactory = DriverFactoryProvider.getDriverFactory("chrome");
             driver = driverFactory.getDriver();
+
         }
 
         @After
