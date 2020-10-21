@@ -10,6 +10,8 @@ public class PageObjectManager {
     private HomePage homePage;
     private RegistrationPage registrationPage;
     private StoreConfig storeConfig;
+    private SignInPage signInPage;
+    private CreateAnAccountPage createAnAccountPage;
     
     public PageObjectManager(WebDriver driver, StoreConfig storeConfig) {
         this.driver = driver;
@@ -28,6 +30,20 @@ public class PageObjectManager {
             registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         }
         return registrationPage;
+    }
+
+    public SignInPage getSingInPage() {
+        if (signInPage == null) {
+            signInPage = PageFactory.initElements(driver, SignInPage.class);
+        }
+        return signInPage;
+    }
+
+    public CreateAnAccountPage getCreateAnAccountPage() {
+        if (createAnAccountPage == null) {
+            createAnAccountPage = PageFactory.initElements(driver, CreateAnAccountPage.class);
+        }
+        return createAnAccountPage;
     }
 
     public void goToHomePage() {
